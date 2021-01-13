@@ -27,6 +27,12 @@ class ReportTest extends \PHPUnit_Framework_TestCase
         $valid_format = \Douglas\Request\Report::getFormat('DOCX');
         $this->assertEquals('docx', $valid_format);
     }
+    
+    public function testXlsxIsValidFormat()
+    {
+        $valid_format = \Douglas\Request\Report::getFormat('XLSX');
+        $this->assertEquals('xlsx', $valid_format);
+    }    
 
     public function testInvalidFormats()
     {
@@ -34,7 +40,7 @@ class ReportTest extends \PHPUnit_Framework_TestCase
             $valid_format = \Douglas\Request\Report::getFormat('PHP');
         } catch (\Exception $expected) {
             $this->assertEquals(
-                "Invalid format php.  Needs to be one of these: html, xls, pdf, docx.",
+                "Invalid format php.  Needs to be one of these: html, xls, pdf, docx, xlsx.",
                 $expected->getMessage()
             );
 
