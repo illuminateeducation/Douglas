@@ -31,7 +31,7 @@ class ReportTest extends \PHPUnit_Framework_TestCase
     public function testXlsxIsValidFormat()
     {
         $valid_format = \Douglas\Request\Report::getFormat('XLSX');
-        $this->assertEquals('docx', $valid_format);
+        $this->assertEquals('xlsx', $valid_format);
     }    
 
     public function testInvalidFormats()
