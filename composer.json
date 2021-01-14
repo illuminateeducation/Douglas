@@ -1,5 +1,5 @@
 {
-  "name": "zacharyrankin/douglas",
+  "name": "illuminateeducation/douglas",
   "type": "library",
   "description": "Douglas PHP library for running Jasper Reports using their report REST API (v2)",
   "keywords": ["php", "jasper", "report", "jasperserver"],
