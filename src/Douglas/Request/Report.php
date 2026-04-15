@@ -9,6 +9,7 @@ class Report
     const FORMAT_XLS = 'xls';
     const FORMAT_DOCX = 'docx';
     const FORMAT_XLSX = 'xlsx';
+    const FORMAT_CSV = 'csv';
 
     public $jasper_url;
     public $report_url;
@@ -152,6 +153,7 @@ class Report
             self::FORMAT_PDF,
             self::FORMAT_DOCX,
             self::FORMAT_XLSX,
+            self::FORMAT_CSV,
         );
         if (!in_array($format, $allowed_formats)) {
             throw new \Exception(
